@@ -1,0 +1,36 @@
+﻿<Window x:Class="TextEditor.ReferenceDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextEditor"
+        mc:Ignorable="d"
+        Title="О программе" SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
+        local:WindowCustomizer.CanMaximize="False"
+        local:WindowCustomizer.CanMinimize="False"
+        local:WindowCustomizer.Sizeble="False"
+        local:WindowCustomizer.ShowIcon="False">
+    <DockPanel>
+        <Button Content="Ок" HorizontalAlignment="Right" Margin="10,0,10,10" Width="80" Height="22" DockPanel.Dock="Bottom" Click="Button_Click"/>
+        <DockPanel Margin="10">
+            <TextBlock DockPanel.Dock="Top" 
+                       FontFamily="Consolas"
+                       FontSize="20pt"
+                       HorizontalAlignment="Center"> <Bold> SimpleEditorLite </Bold> </TextBlock>
+            <Separator DockPanel.Dock="Top" Margin="0,10,0,10"/>
+            <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Width="430">
+                SimpleEditorLite - простой текстовый редактор, 
+                созданный в рамках изучения языка программирования C# 
+                с использованием платформы для построения клиенских 
+                приложений WPF (Windows Presentation Foundation).
+                <LineBreak/>
+            </TextBlock>
+            <TextBlock xml:space="preserve">Автор: Шамшурин Михаил
+                
+Обратная связь: 
+    -<Hyperlink NavigateUri="https://github.com/6eremotuk01" x:Name="GitHub_URL" Click="GitHub_URL_Click">GitHub</Hyperlink>
+    -<Hyperlink NavigateUri="https://t.me/the_black_cap" x:Name="Telegram_URL" Click="Telegram_URL_Click">Telegram</Hyperlink></TextBlock>
+        </DockPanel>
+    </DockPanel>
+</Window>
